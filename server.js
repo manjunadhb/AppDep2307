@@ -45,6 +45,7 @@ const upload = multer({ storage: storage });
 app.use(cors());
 app.use(express.json());
 app.use("/uploads", express.static("uploads"));
+app.use(express.static(path.join(__dirname, "./client/build")));
 
 // create a write stream (in append mode)
 let accessLogStream = fs.createWriteStream(path.join(__dirname, "access.log"), {

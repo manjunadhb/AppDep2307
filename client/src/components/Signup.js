@@ -27,7 +27,7 @@ function Signup() {
       body: dataToSend,
     };
 
-    let JSONData = await fetch("http://localhost:5678/signup", reqOptions);
+    let JSONData = await fetch("/signup", reqOptions);
 
     let JSOData = await JSONData.json();
 

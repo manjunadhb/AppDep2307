@@ -18,9 +18,7 @@ function Home() {
         Hi, Welcome to {storeObj.userReducer.loginDetails.firstName}
         {storeObj.userReducer.loginDetails.lastName}
       </h2>
-      <img
-        src={`http://localhost:5678/${storeObj.userReducer.loginDetails.profilePic}`}
-      ></img>
+      <img src={`/${storeObj.userReducer.loginDetails.profilePic}`}></img>
       <div>
         <button
           onClick={() => {
