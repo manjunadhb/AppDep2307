@@ -22,9 +22,7 @@ function EditProfile() {
     lastNameInputRef.current.value = storeObj.loginDetails.lastName;
     ageInputRef.current.value = storeObj.loginDetails.age;
     emailInputRef.current.value = storeObj.loginDetails.email;
-    setProfilePicURL(
-      `http://localhost:5678/${storeObj.loginDetails.profilePic}`
-    );
+    setProfilePicURL(`/${storeObj.loginDetails.profilePic}`);
   }, []);
 
   let sendUpdatedDataToServerFD = async () => {
@@ -44,7 +42,7 @@ function EditProfile() {
       body: dataToSend,
     };
 
-    let JSONData = await fetch("http://localhost:5678/editProfile", reqOptions);
+    let JSONData = await fetch("/editProfile", reqOptions);
 
     let JSOData = await JSONData.json();
 
