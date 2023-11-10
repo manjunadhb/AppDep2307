@@ -128,7 +128,8 @@ function Login() {
             onClick={() => {
               //validateLoginFromServer();
               //dispatch(validateLogin());
-              validateLoginUsingAxios();
+              //validateLoginUsingAxios();
+              validateLogin();
             }}
           >
             Login
