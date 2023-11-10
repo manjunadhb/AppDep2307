@@ -48,12 +48,12 @@ app.use("/uploads", express.static("uploads"));
 app.use(express.static(path.join(__dirname, "./client/build")));
 
 // create a write stream (in append mode)
-let accessLogStream = fs.createWriteStream(path.join(__dirname, "access.log"), {
-  flags: "a",
-});
+// let accessLogStream = fs.createWriteStream(path.join(__dirname, "access.log"), {
+//   flags: "a",
+// });
 
-// setup the logger
-app.use(morgan("combined", { stream: accessLogStream }));
+// // setup the logger
+// app.use(morgan("combined", { stream: accessLogStream }));
 
 app.use(express.urlencoded());
 
